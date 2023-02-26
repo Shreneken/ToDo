@@ -1,0 +1,10 @@
+<div>
+    <form (submit)="addItem()">
+      <label for="new-item">Add a new to-do:</label>
+      <input type="text" id="new-item" [(ngModel)]="newItemText" name="newItemText">
+      <button type="submit">Add</button>
+    </form>
+    <ul>
+      <li *ngFor="let item of items">{{item}} <button (click)="removeItem(item)">Remove</button></li>
+    </ul>
+  </div>
